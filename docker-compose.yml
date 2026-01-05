@@ -16,7 +16,7 @@ services:
       - '5432:5432'
 
   backend:
-    build: ./backend
+    image: ghcr.io/monczuss/devops-project/backend:latest
     env_file:
       - ./backend/.env
     ports:
@@ -24,8 +24,9 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+
   frontend:
-    build: ./frontend
+    image: ghcr.io/monczuss/devops-project/frontend:latest
     ports:
       - '3000:80'
     depends_on:
