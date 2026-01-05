@@ -1,0 +1,10 @@
+name: Build & Publish
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish:
+    uses: ./.github/workflows/docker-build.yml
+    secrets: inherit

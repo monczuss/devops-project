@@ -1,0 +1,17 @@
+{
+	"name": "devops-project",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"start": "docker compose up --build",
+		"install:all": "pnpm -w install",
+		"lint": "pnpm -r lint",
+		"test": "pnpm -r test",
+		"build:frontend": "pnpm --filter frontend build",
+		"build:backend": "echo \"backend build (none)\"",
+		"build": "pnpm build:frontend && pnpm build:backend"
+	},
+	"devDependencies": {
+		"concurrently": "^9.2.1"
+	}
+}
