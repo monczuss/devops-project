@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:16-alpine
+    restart: always
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
@@ -17,6 +18,7 @@ services:
 
   backend:
     image: ghcr.io/monczuss/devops-project/backend:latest
+    restart: unless-stopped
     env_file:
       - ./backend/.env
     ports:
@@ -27,6 +29,7 @@ services:
 
   frontend:
     image: ghcr.io/monczuss/devops-project/frontend:latest
+    restart: unless-stopped
     ports:
       - '3000:80'
     depends_on:
