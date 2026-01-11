@@ -78,6 +78,7 @@ uruchomiono aplikację z wykorzystaniem obrazów pobieranych z GitHub Container 
 
 Link do aplikacji: https://monczuss.dev/devops/
 
+Skonfigurowanie plików .env w Backend i FrontEnd
 Wdrożenie aplikacji realizowane jest za pomocą poleceń:
 
 ```bash
